@@ -17,8 +17,8 @@
     >
      <v-card-text>
         <v-text-field
-            v-model="firstname"
-            name="name"
+            v-model="form.firstname"
+            name="firstname"
             label="First name"
         >
         </v-text-field>
@@ -35,7 +35,7 @@
         </v-radio-group> -->
         <v-textarea
         name="question"
-        v-model="question"
+        v-model="form.question"
         >
         </v-textarea>
     <span>{{ currentPanelist }}</span>
@@ -59,11 +59,13 @@ import axios from "axios";
 export default {
 name: 'NetlifyForm',
 data: () => ({
-
+    form: {
+        firstname:'',
+        question:''
+    },
     panelists: ['Evan You', 'Chris Fritz'],
     currentPanelist: 'Evan You',
-    firstname: '',
-    question: '',
+   
 
 
 }),
