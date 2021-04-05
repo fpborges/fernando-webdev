@@ -15,12 +15,13 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+    <form name="ask-question" netlify netlify-honeypot="bot-field">
       <input type="text" name="name" />
       <input type="radio" name="panelist" />
       <textarea name="question"></textarea>
+      <button type="submit">Send</button>
     </form>
-    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+    <!-- <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
       <p class="hidden">
         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
       </p>
@@ -33,6 +34,6 @@
       <p>
         <button type="submit">Send</button>
       </p>
-    </form>
+    </form> -->
   </body>
 </html>
