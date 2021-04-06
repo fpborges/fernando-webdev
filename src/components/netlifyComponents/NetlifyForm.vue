@@ -19,15 +19,15 @@
      <v-card-text>
         <v-text-field
             v-model="form.email"
-            name="firstname"
-            label="First name"
+            name="email"
+            label="Email"
         >
         </v-text-field>
 
         <v-text-field
             v-model="form.firstname"
-            name="email"
-            label="Email"
+            name="firstname"
+            label="First name"
         >
         </v-text-field>
      
