@@ -13,7 +13,7 @@
     name="ask-question"
     method="post"
     data-netlify="true"
-    data-netlify-honeypot="bot-field"
+
     data-netlify-recaptcha="true"
     >
      <v-card-text>
