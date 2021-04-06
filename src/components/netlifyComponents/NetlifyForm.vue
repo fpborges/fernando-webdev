@@ -5,7 +5,7 @@
     outlined
   >
     <v-card-title>
-      Leave your message below
+      Contact me
     </v-card-title>
 
     <form
@@ -18,11 +18,17 @@
      <v-card-text>
         <v-text-field
             v-model="form.firstname"
+            name="email"
+            label="Email"
+        >
+        </v-text-field>
+
+        <v-text-field
+            v-model="form.email"
             name="firstname"
             label="First name"
         >
         </v-text-field>
-
         <!-- <v-radio-group
             v-model="currentPanelist">
             <v-radio
@@ -60,6 +66,7 @@ export default {
 name: 'NetlifyForm',
 data: () => ({
     form: {
+        email:'',
         firstname:'',
         question:''
     },
