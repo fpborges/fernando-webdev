@@ -14,21 +14,23 @@
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
+    data-netlify-recaptcha="true"
     >
      <v-card-text>
-        <v-text-field
-            v-model="form.firstname"
-            name="email"
-            label="Email"
-        >
-        </v-text-field>
-
         <v-text-field
             v-model="form.email"
             name="firstname"
             label="First name"
         >
         </v-text-field>
+
+        <v-text-field
+            v-model="form.firstname"
+            name="email"
+            label="Email"
+        >
+        </v-text-field>
+     
         <!-- <v-radio-group
             v-model="currentPanelist">
             <v-radio
@@ -73,8 +75,6 @@ data: () => ({
     panelists: ['Evan You', 'Chris Fritz'],
     currentPanelist: 'Evan You',
    
-
-
 }),
 
 methods:{
