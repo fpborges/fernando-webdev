@@ -24,9 +24,17 @@
        dismissible
        close-text="Close Alert"
        elevation='5'
-  
        >
       Message cannot be submitted. Please try again.
+    </v-alert>
+    <v-alert 
+       v-model='warningAlert'
+       type="warning"
+       dismissible
+       close-text="Close Alert"
+       elevation='5'
+       >
+      Please check form validation before submit.
     </v-alert>
 
 
@@ -74,8 +82,11 @@
     </v-card-text>
 
     <v-divider/>    
+
     <v-card-actions>
         <v-btn
+        :disabled="!formValidation"
+        @click="formValidate()"
         type="submit"
         color="success"
         >Submit</v-btn>
@@ -110,7 +121,9 @@ data: () => ({
     },
     formValidation: true,
     successAlert: false,
-    errorAlert: false
+    errorAlert: false,
+    warningAlert: false,
+    submitValidation: true,
 }),
 
 methods:{
@@ -122,9 +135,25 @@ methods:{
       this.form.message='';
       //reser validations
       this.$refs.contactForm.reset();
-
      },
-
+     formValidate(){
+       this.$refs.contactForm.validate();
+       if(this.formValidation){
+         this.warningAlert = true;
+       }
+     },
+     checkFormBeforeSubmit(){
+       this.submitValidation = true;
+       if(!this.form.email){
+         this.submitValidation = false;
+       }
+       if(!this.form.fullname){
+         this.submitValidation = false;
+       }
+       if(!this.form.message){
+         this.submitValidation = false;
+       }
+     },
      encode (data) {
       return Object.keys(data)
         .map(
@@ -132,11 +161,13 @@ methods:{
         )
         .join("&");
     },
-    handleSubmit () {
+    async handleSubmit () {
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
-      axios.post(
+      this.checkFormBeforeSubmit();
+      if(this.submitValidation){
+       await axios.post(
         "/",
         this.encode({
           "form-name": "contact-me",
@@ -146,12 +177,15 @@ methods:{
       ).then(() =>{
           this.successAlert = true;
           this.errorAlert = false;
+          this.warningAlert = false;
           this.resetForm();
       }).catch(()=>{
           this.errorAlert = true;
           this.successAlert = false;
+          this.warningAlert = false;
           this.resetForm();
       });
+      }
     }
 }
 
