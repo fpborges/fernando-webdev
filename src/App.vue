@@ -1,9 +1,9 @@
 <template>
   <v-app id="app">
-    <!-- <v-parallax
+    <v-parallax
     dark
     src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-    height="680"
+    height="800"
     jumbotron
   >
     <v-row
@@ -21,23 +21,53 @@
           Build your application today!
         </h4>
       </v-col>
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+      <button type="button" onClick="document.getElementById('menu').scrollIntoView();" class="align-self-end v-btn v-btn--fab v-btn--outlined v-btn--round theme--dark v-size--default">
+        <span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-double-down theme--dark"></i>
+        </span>
+      </button>
+      </v-col>
     </v-row>
-  </v-parallax> -->
+  </v-parallax>
 
-  <div class="v-image v-responsive theme--light" style="min-height: calc(100vh - 100px);"><div class="v-responsive__sizer" style="padding-bottom: 66.6838%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 1900px;"><div class="container fill-height"><div class="row white--text mx-auto align-center justify-center"><h1 class="white--text text-center col col-12"><span class="font-weight-light display-2">
+  <!-- <div class="v-image v-responsive theme--light" style="min-height: calc(100vh - 100px);">
+    <div class="v-responsive__sizer" style="padding-bottom: 66.6838%;"></div>
+    <div class="v-image__image v-image__image--cover" style="background-image: url(&quot;https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80&quot;); background-position: center center;"></div>
+    <div class="v-responsive__content" style="width: 1900px;">
+    <div class="container fill-height">
+      <div class="row white--text mx-auto align-center justify-center">
+        <h1 class="white--text text-center col col-12">
+          <span class="font-weight-light display-2">
                       WELCOME TO
-                    </span> <br> <span class="font-weight-black display-4">
+                    </span> <br> 
+          <span class="font-weight-black display-4">
                       VUETIFY
-                    </span></h1> <button type="button" onClick="document.getElementById('hello').scrollIntoView();" class="align-self-end v-btn v-btn--fab v-btn--outlined v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-double-down theme--dark"></i></span></button></div></div></div></div>
+          </span></h1> 
+          <button type="button" onClick="document.getElementById('hello').scrollIntoView();" class="align-self-end v-btn v-btn--fab v-btn--outlined v-btn--round theme--dark v-size--default">
+            <span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-double-down theme--dark"></i>
+            </span>
+            </button>
+            </div>
+            </div>
+            </div>
+            </div>
 
 
-                    <button type="button" class="align-self-end v-btn v-btn--fab v-btn--outlined v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-double-down theme--dark"></i></span></button>
+          <button type="button" class="align-self-end v-btn v-btn--fab v-btn--outlined v-btn--round theme--dark v-size--default">
+            <span class="v-btn__content">
+              <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-double-down theme--dark"></i>
+              </span>
+          </button> -->
+                    
   <v-app-bar
       color="primary"
       dark
     >
-      <div class="d-flex align-center">
-        afafas
+      <div class="d-flex align-center" id="menu">
+  
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
@@ -91,9 +121,9 @@ export default {
 };
 </script>
 <style>
-#app img{
+/* #app img{
   height: 100%;
-}
+} */
 /* .cover{
     min-height: 10%;
     min-width: 100%;
