@@ -30,16 +30,20 @@
     </v-alert>
 
 
-    <form
+    <v-form
     @submit.prevent="handleSubmit"
+    v-model="formValidation"
+    ref="contactForm"
     name="contact-me"
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
+    lazy-validation
     >
      <v-card-text>
         <v-text-field
             v-model="form.email"
+            :rules="form.emailRules"
             name="email"
             label="Email"
         >
@@ -47,6 +51,7 @@
 
         <v-text-field
             v-model="form.fullname"
+            :rules="form.fullnameRules"
             name="fullname"
             label="Full name"
         >
@@ -61,6 +66,7 @@
     
         <v-textarea
           v-model="form.message"
+          :rules="form.messageRules"
           name="message"
           label="Leave your message here"
         >
@@ -69,14 +75,12 @@
 
     <v-divider/>    
     <v-card-actions>
-    
         <v-btn
         type="submit"
         color="success"
         >Submit</v-btn>
     </v-card-actions>
-       
-  </form>
+  </v-form>
   </v-card>
   
 </template>
@@ -89,15 +93,38 @@ name: 'NetlifyForm',
 data: () => ({
     form: {
         email:'',
+        emailRules: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        ],
         fullname:'',
+        fullnameRules: [
+        v => !!v || 'Fullname is required',
+        ],
         company:'',
-        message:''
+        message:'',
+        messageRules: [
+        v => !!v || 'Message is required',
+        v => (v && v.length >= 10) || 'Message must be more than 10 characters',
+        ],
     },
+    formValidation: true,
     successAlert: false,
     errorAlert: false
 }),
 
 methods:{
+     resetForm(){
+      //clean fields
+      this.form.email='';
+      this.form.fullname='';
+      this.form.company='';
+      this.form.message='';
+      //reser validations
+      this.$refs.contactForm.reset();
+
+     },
+
      encode (data) {
       return Object.keys(data)
         .map(
@@ -119,9 +146,11 @@ methods:{
       ).then(() =>{
           this.successAlert = true;
           this.errorAlert = false;
+          this.resetForm();
       }).catch(()=>{
           this.errorAlert = true;
           this.successAlert = false;
+          this.resetForm();
       });
     }
 }
