@@ -1,16 +1,38 @@
 <template>
 <v-card
     class="mx-auto"
-    max-width="544"
+    max-width="640"
+    elevation='2'
     outlined
   >
     <v-card-title>
       Contact me
     </v-card-title>
+       <v-alert 
+       v-model='successAlert'
+       type="success"
+       dismissible
+       close-text="Close Alert"
+       elevation='5'
+  
+       >
+      Message Submitted!
+    </v-alert>
+    <v-alert 
+       v-model='errorAlert'
+       type="error"
+       dismissible
+       close-text="Close Alert"
+       elevation='5'
+  
+       >
+      Message cannot be submitted. Please try again.
+    </v-alert>
+
 
     <form
     @submit.prevent="handleSubmit"
-    name="ask-question"
+    name="contact-me"
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
@@ -24,34 +46,33 @@
         </v-text-field>
 
         <v-text-field
-            v-model="form.firstname"
-            name="firstname"
-            label="First name"
+            v-model="form.fullname"
+            name="fullname"
+            label="Full name"
         >
         </v-text-field>
-     
-        <!-- <v-radio-group
-            v-model="currentPanelist">
-            <v-radio
-            v-for="(panelist,index) in panelists" :key="index"
-            :label="`${panelist}`"
-            :value="panelist"
-            :checked="panelist === currentPanelist"
-            />
-
-        </v-radio-group> -->
+        
+        <v-text-field
+            v-model="form.company"
+            name="company"
+            label="Company name"
+        >
+        </v-text-field>
+    
         <v-textarea
-        name="question"
-        v-model="form.question"
+          v-model="form.message"
+          name="message"
+          label="Leave your message here"
         >
         </v-textarea>
-    <span>{{ currentPanelist }}</span>
     </v-card-text>
+
     <v-divider/>    
     <v-card-actions>
     
         <v-btn
         type="submit"
+        color="success"
         >Submit</v-btn>
     </v-card-actions>
        
@@ -68,12 +89,12 @@ name: 'NetlifyForm',
 data: () => ({
     form: {
         email:'',
-        firstname:'',
-        question:''
+        fullname:'',
+        company:'',
+        message:''
     },
-    panelists: ['Evan You', 'Chris Fritz'],
-    currentPanelist: 'Evan You',
-   
+    successAlert: false,
+    errorAlert: false
 }),
 
 methods:{
@@ -91,14 +112,16 @@ methods:{
       axios.post(
         "/",
         this.encode({
-          "form-name": "ask-question",
+          "form-name": "contact-me",
           ...this.form
         }),
         axiosConfig
       ).then(() =>{
-          alert('Form Submitted!');
+          this.successAlert = true;
+          this.errorAlert = false;
       }).catch(()=>{
-          alert('Error!');
+          this.errorAlert = true;
+          this.successAlert = false;
       });
     }
 }
