@@ -13,11 +13,5 @@ data: () => ({
 }
 </script>
 <style scoped>
-/* .about {
-   min-height: 100%;
-   background-image: url(https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center center;
-} */
+
 </style>

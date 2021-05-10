@@ -1,28 +1,25 @@
 <template>
   <div
   class='Header'>
-  <!-- <v-parallax
+    <v-parallax
     dark
-    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+    height="800"
+    jumbotron
+    src="https://i.ibb.co/qp9qfKb/photography-account-1s-Sfrozgi-Fk-unsplash.jpg"
+    width='400'
   >
-    <v-row
-      align="center"
-      justify="center"
+    <v-layout
+      align-center
+      column
+      justify-center
     >
-      <v-col
-        class="text-center"
-        cols="12"
-      >
-        <h1 class="display-1 font-weight-thin mb-4">
-          Vuetify
-        </h1>
-        <h4 class="subheading">
-          Build your application today!
-        </h4>
-      </v-col>
-    </v-row>
-  </v-parallax> -->
+      <h1 class="display-2 font-weight-thin mb-3">Vuetify.js</h1>
+      <h4 class="subheading">Build your application today!</h4>
+    </v-layout>
+  </v-parallax>
 
+  <v-img src='https://i.ibb.co/xL0mWH7/christian-wiediger-Wkf-Drhx-DMC8-unsplash.jpg' />
+    
   </div>
 </template>
 

@@ -1,16 +1,49 @@
 <template>
   <div class="home">
-    <v-row>
+    
       <Header />
-    </v-row>
-    <v-row class="text-center">
-      <v-col cols='12'>
+   
+    <v-app-bar
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center" id="menu">
+  
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="/about"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Fernando Test</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
         <HelloWorld msg="Welcome to Your Vue.js App"/>
-      </v-col>
-      <v-col cols='12'>
+
+     
         <NetlifyForm />
-      </v-col>
-     </v-row>
+    
   </div>
 </template>
 
