@@ -1,5 +1,5 @@
 <template>
-	<div class="header">
+	<div class="Header">
 		<div class="discover">
 			<v-row>
 				<v-col>
@@ -10,13 +10,19 @@
 								:fab="hover ? true : false"
 								dark
 								large
-								:color="hover ? 'green' : 'primary'"
+								:color="hover ? 'white' : 'primary'"
 							>
-								<v-icon v-if="hover" dark> mdi-android </v-icon>
-								<v-span v-else>About me!</v-span>
+								<img
+									v-if="hover"
+									src="https://i.ibb.co/ryfMqQF/me.jpg"
+									alt="me"
+									border="0"
+								/>
+								<span v-else>About me!</span>
 							</v-btn>
 						</v-fab-transition>
 					</v-hover>
+					<!-- <v-img src="D:\Projects\fernando-webdev\src\assets\me.JPG" /> -->
 				</v-col>
 			</v-row>
 		</div>
@@ -25,7 +31,7 @@
 
 <script>
 	export default {
-		name: "header",
+		name: "Header",
 		data: () => ({
 			show: false,
 		}),
@@ -33,7 +39,7 @@
 </script>
 
 <style>
-	.header {
+	.Header {
 		height: 100%;
 		margin: 0;
 		background: url("https://ohlaladani.com.br/wp-content/uploads/wallpaper-OHLALADANI_DESKTOP_WALLPAPERS_AVENTURA-2.jpg")
