@@ -3,10 +3,20 @@
 		<div class="discover">
 			<v-row>
 				<v-col>
-					<v-btn class="primary">Learn About me</v-btn>
-					<v-btn class="mx-2" fab dark large color="purple">
-						<v-icon dark> mdi-android </v-icon>
-					</v-btn>
+					<v-hover v-slot="{ hover }" open-delay="200">
+						<v-fab-transition>
+							<v-btn
+								:class="{ 'on-hover': hover }"
+								:fab="hover ? true : false"
+								dark
+								large
+								:color="hover ? 'green' : 'primary'"
+							>
+								<v-icon v-if="hover" dark> mdi-android </v-icon>
+								<v-span v-else>About me!</v-span>
+							</v-btn>
+						</v-fab-transition>
+					</v-hover>
 				</v-col>
 			</v-row>
 		</div>
@@ -37,5 +47,8 @@
 		top: 50%;
 		width: 100%;
 		left: 0;
+	}
+
+	.on-hover {
 	}
 </style>
