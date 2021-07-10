@@ -2,8 +2,8 @@
 	<div class="home">
 		<Header />
 
-		<v-app-bar color="primary" dark>
-			<div class="d-flex align-center" id="menu">
+		<v-app-bar dark id="menu" shrink-on-scroll fade-img-on-scroll>
+			<div class="d-flex align-center">
 				<v-img
 					alt="Vuetify Logo"
 					class="shrink mr-2"
@@ -23,6 +23,13 @@
 				/>
 			</div>
 
+			<v-tabs v-model="tab" centered align-with-title>
+				<v-tabs-slider color="red"></v-tabs-slider>
+				<v-tab v-for="(item, index) in tabMenu" :key="index">
+					{{ item }}
+				</v-tab>
+			</v-tabs>
+
 			<v-spacer></v-spacer>
 
 			<v-btn href="/about" target="_blank" text>
@@ -30,9 +37,34 @@
 				<v-icon>mdi-open-in-new</v-icon>
 			</v-btn>
 		</v-app-bar>
-		<HelloWorld msg="Welcome to Your Vue.js App" />
 
-		<NetlifyForm />
+		<v-tabs-items v-model="tab">
+			<v-tab-item
+				eager
+				v-for="(item, id) in tabMenu"
+				:key="id"
+				transition="scale-transition"
+			>
+				<div v-if="id === 0">
+					<HelloWorld msg="Welcome to Your Vue.js App" />
+				</div>
+				<div v-if="id === 1">
+					<HelloWorld msg="Welcome to Your Vue.js App" />
+				</div>
+				<div v-if="id === 2">
+					<HelloWorld msg="Welcome to Your Vue.js App" />
+				</div>
+				<div v-if="id === 3">
+					<HelloWorld msg="Welcome to Your Vue.js App" />
+				</div>
+				<div v-if="id === 4">
+					<HelloWorld msg="Welcome to Your Vue.js App" />
+				</div>
+				<div v-if="id === 5">
+					<NetlifyForm />
+				</div>
+			</v-tab-item>
+		</v-tabs-items>
 	</div>
 </template>
 
@@ -49,9 +81,17 @@
 			HelloWorld,
 			NetlifyForm,
 		},
-		mounted() {
-			console.log("test");
-		},
+		data: () => ({
+			tab: null,
+			tabMenu: [
+				"Who is Fernando",
+				"Experience",
+				"Skills",
+				"Projects",
+				"Hobbies",
+				"Contact me",
+			],
+		}),
 	};
 </script>
 

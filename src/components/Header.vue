@@ -7,10 +7,11 @@
 						<v-fab-transition>
 							<v-btn
 								:class="{ 'on-hover': hover }"
-								:fab="hover ? true : false"
+								fab
 								dark
-								large
+								x-large
 								:color="hover ? 'white' : 'primary'"
+								href="#menu"
 							>
 								<img
 									v-if="hover"
@@ -18,7 +19,7 @@
 									alt="me"
 									border="0"
 								/>
-								<span v-else>About me!</span>
+								<span v-else>About me</span>
 							</v-btn>
 						</v-fab-transition>
 					</v-hover>
@@ -55,6 +56,7 @@
 		left: 0;
 	}
 
-	.on-hover {
+	html {
+		scroll-behavior: smooth;
 	}
 </style>
