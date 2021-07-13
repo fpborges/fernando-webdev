@@ -2,7 +2,7 @@
 	<div class="home">
 		<Header />
 
-		<v-app-bar dark id="menu" shrink-on-scroll fade-img-on-scroll>
+		<v-app-bar id="menu" shrink-on-scroll fade-img-on-scroll>
 			<div class="d-flex align-center">
 				<v-img
 					alt="Vuetify Logo"
@@ -46,7 +46,7 @@
 				transition="scale-transition"
 			>
 				<div v-if="id === 0">
-					<HelloWorld msg="Welcome to Your Vue.js App" />
+					<AboutFernando />
 				</div>
 				<div v-if="id === 1">
 					<HelloWorld msg="Welcome to Your Vue.js App" />
@@ -70,9 +70,10 @@
 
 <script>
 	// @ is an alias to /src
-	import Header from "../components/Header";
-	import HelloWorld from "../components/HelloWorld";
-	import NetlifyForm from "../components/netlifyComponents/NetlifyForm";
+	import Header from "../components/Header.vue";
+	import HelloWorld from "../components/HelloWorld.vue";
+	import NetlifyForm from "../components/netlifyComponents/NetlifyForm.vue";
+	import AboutFernando from "../components/AboutFernando.vue";
 
 	export default {
 		name: "Home",
@@ -80,6 +81,7 @@
 			Header,
 			HelloWorld,
 			NetlifyForm,
+			AboutFernando,
 		},
 		data: () => ({
 			tab: null,
