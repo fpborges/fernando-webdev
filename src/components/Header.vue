@@ -7,6 +7,7 @@
 						<v-fab-transition>
 							<v-btn
 								:class="{ 'on-hover': hover }"
+								id="top-button"
 								fab
 								dark
 								x-large
@@ -58,5 +59,8 @@
 
 	html {
 		scroll-behavior: smooth;
+	}
+	#top-button {
+		width: 100px;
 	}
 </style>

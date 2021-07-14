@@ -2,29 +2,24 @@
 	<div class="home">
 		<Header />
 
-		<v-app-bar id="menu" shrink-on-scroll fade-img-on-scroll>
+		<v-app-bar
+			id="menu"
+			shrink-on-scroll
+			fade-img-on-scroll
+			style="background-color: white"
+		>
 			<div class="d-flex align-center">
 				<v-img
 					alt="Vuetify Logo"
 					class="shrink mr-2"
 					contain
-					src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-					transition="scale-transition"
+					src="https://i.ibb.co/ryfMqQF/me.jpg"
 					width="40"
-				/>
-
-				<v-img
-					alt="Vuetify Name"
-					class="shrink mt-1 hidden-sm-and-down"
-					contain
-					min-width="100"
-					src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-					width="100"
 				/>
 			</div>
 
 			<v-tabs v-model="tab" centered align-with-title>
-				<v-tabs-slider color="red"></v-tabs-slider>
+				<v-tabs-slider color="#311B92"></v-tabs-slider>
 				<v-tab v-for="(item, index) in tabMenu" :key="index">
 					{{ item }}
 				</v-tab>
@@ -33,17 +28,17 @@
 			<v-spacer></v-spacer>
 
 			<v-btn href="/about" target="_blank" text>
-				<span class="mr-2">Fernando Test</span>
+				<span class="mr-2">Website Info</span>
 				<v-icon>mdi-open-in-new</v-icon>
 			</v-btn>
 		</v-app-bar>
 
-		<v-tabs-items v-model="tab">
+		<v-tabs-items v-model="tab" style="background-color: #f5f5f5">
 			<v-tab-item
 				eager
 				v-for="(item, id) in tabMenu"
 				:key="id"
-				transition="scale-transition"
+				transition="fade-transition"
 			>
 				<div v-if="id === 0">
 					<AboutFernando />
@@ -65,6 +60,19 @@
 				</div>
 			</v-tab-item>
 		</v-tabs-items>
+		<v-btn
+			v-scroll="onScroll"
+			v-show="fab"
+			fab
+			dark
+			fixed
+			bottom
+			right
+			color="primary"
+			href="#menu"
+		>
+			<v-icon>mdi-arrow-up</v-icon>
+		</v-btn>
 	</div>
 </template>
 
@@ -85,6 +93,7 @@
 		},
 		data: () => ({
 			tab: null,
+			fab: false,
 			tabMenu: [
 				"Who is Fernando",
 				"Experience",
@@ -94,6 +103,14 @@
 				"Contact me",
 			],
 		}),
+		methods: {
+			onScroll(e) {
+				console.log("scroll");
+				if (typeof window === "undefined") return;
+				const top = window.pageYOffset || e.target.scrollTop || 0;
+				this.fab = top > 800;
+			},
+		},
 	};
 </script>
 

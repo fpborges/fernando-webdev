@@ -6,18 +6,6 @@
 					<v-btn :color="hover ? `success` : `secondary`" fab x-large dark>
 						<v-icon>mdi-domain</v-icon>
 					</v-btn>
-
-					<!-- <v-card
-						:elevation="hover ? 12 : 1"
-						class="mx-auto"
-						height="150"
-						max-width="150"
-					>
-						{{ hover }}
-						<v-card-text class="my-4 text-center text-h6">
-							Hover over me!
-						</v-card-text>
-					</v-card> -->
 				</v-hover>
 			</v-col>
 		</v-row>
