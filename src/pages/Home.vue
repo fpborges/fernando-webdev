@@ -44,7 +44,7 @@
 					<AboutFernando />
 				</div>
 				<div v-if="id === 1">
-					<HelloWorld msg="Welcome to Your Vue.js App" />
+					<Experience />
 				</div>
 				<div v-if="id === 2">
 					<HelloWorld msg="Welcome to Your Vue.js App" />
@@ -82,6 +82,7 @@
 	import HelloWorld from "../components/HelloWorld.vue";
 	import NetlifyForm from "../components/netlifyComponents/NetlifyForm.vue";
 	import AboutFernando from "../components/AboutFernando.vue";
+	import Experience from "../components/Experience.vue";
 
 	export default {
 		name: "Home",
@@ -90,6 +91,7 @@
 			HelloWorld,
 			NetlifyForm,
 			AboutFernando,
+			Experience,
 		},
 		data: () => ({
 			tab: null,
