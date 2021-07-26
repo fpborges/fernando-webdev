@@ -27,7 +27,7 @@
 
 			<v-spacer></v-spacer>
 
-			<v-btn href="/about" target="_blank" text>
+			<v-btn href="/techstack" target="_blank" text>
 				<span class="mr-2">Website Info</span>
 				<v-icon>mdi-open-in-new</v-icon>
 			</v-btn>
@@ -73,6 +73,7 @@
 		>
 			<v-icon>mdi-arrow-up</v-icon>
 		</v-btn>
+		<Footer />
 	</div>
 </template>
 
@@ -83,6 +84,7 @@
 	import NetlifyForm from "../components/netlifyComponents/NetlifyForm.vue";
 	import AboutFernando from "../components/AboutFernando.vue";
 	import Experience from "../components/Experience.vue";
+	import Footer from "../components/Footer.vue";
 
 	export default {
 		name: "Home",
@@ -92,6 +94,7 @@
 			NetlifyForm,
 			AboutFernando,
 			Experience,
+			Footer,
 		},
 		data: () => ({
 			tab: null,

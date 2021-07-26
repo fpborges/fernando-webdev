@@ -61,6 +61,7 @@
 		scroll-behavior: smooth;
 	}
 	#top-button {
-		width: 100px;
+		width: 95px;
+		height: 95px;
 	}
 </style>
