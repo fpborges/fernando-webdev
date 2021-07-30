@@ -33,7 +33,7 @@
 			</v-btn>
 		</v-app-bar>
 
-		<v-tabs-items v-model="tab" style="background-color: #f5f5f5">
+		<v-tabs-items v-model="tab">
 			<v-tab-item
 				eager
 				v-for="(item, id) in tabMenu"
@@ -47,7 +47,7 @@
 					<Experience />
 				</div>
 				<div v-if="id === 2">
-					<HelloWorld msg="Welcome to Your Vue.js App" />
+					<Skills />
 				</div>
 				<div v-if="id === 3">
 					<HelloWorld msg="Welcome to Your Vue.js App" />
@@ -84,6 +84,7 @@
 	import NetlifyForm from "../components/netlifyComponents/NetlifyForm.vue";
 	import AboutFernando from "../components/AboutFernando.vue";
 	import Experience from "../components/Experience.vue";
+	import Skills from "../components/Skills.vue";
 	import Footer from "../components/Footer.vue";
 
 	export default {
@@ -94,6 +95,7 @@
 			NetlifyForm,
 			AboutFernando,
 			Experience,
+			Skills,
 			Footer,
 		},
 		data: () => ({

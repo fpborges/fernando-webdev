@@ -40,8 +40,8 @@
 						</li>
 					</ul>
 				</v-col>
-				<v-col md="2" offset-md="2">
-					Follow me on social medias:
+				<v-col md="3" offset-md="1">
+					Follow me on social media:
 					<div class="caption">
 						<a
 							href="https://www.facebook.com/fernando.p.borges"
