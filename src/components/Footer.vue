@@ -1,29 +1,71 @@
 <template>
-	<div class="Footer mt-10">
+	<div class="Footer">
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
-		<v-row>
-			<v-col cols="4" v-for="(link, id) in links" :key="id">
-				<v-btn text class="white--text" :href="link.ref">{{
-					link.title
-				}}</v-btn>
-			</v-col>
-			<v-col>
-				<div class="caption">
-					Follow me on social medias:<a href="#" class="fa fa-facebook"></a>
-					<a href="#" class="fa fa-twitter"></a>
-					<a href="#" class="fa fa-linkedin"></a>
-					<a href="#" class="fa fa-instagram"></a>
-				</div>
-			</v-col>
-		</v-row>
+		<v-container>
+			<v-row justify="center" class="mt-5">
+				<v-col md="2" offset-md="2">
+					<h4>WebSite Map:</h4>
+					<ul>
+						<li v-for="(link, id) in links" :key="id">
+							<v-btn text class="white--text" :href="link.ref">{{
+								link.title
+							}}</v-btn>
+						</li>
+					</ul>
+				</v-col>
+				<v-col md="2" offset-md="2">
+					<h4>Other Links:</h4>
+					<ul>
+						<li>
+							<v-btn text class="white--text" href="qbord.com">
+								Qbord Project
+							</v-btn>
+						</li>
+						<li>
+							<v-btn
+								text
+								class="white--text"
+								href="https://github.com/fpborges"
+							>
+								GitHub
+							</v-btn>
+						</li>
+						<li>
+							<v-btn text class="white--text" href="/techstack">
+								WebSite Tech Stack
+							</v-btn>
+						</li>
+					</ul>
+				</v-col>
+				<v-col md="2" offset-md="2">
+					Follow me on social medias:
+					<div class="caption">
+						<a
+							href="https://www.facebook.com/fernando.p.borges"
+							class="fa fa-facebook"
+						></a>
+						<a href="https://twitter.com/NandoPBR" class="fa fa-twitter"></a>
+						<a
+							href="https://www.linkedin.com/in/fernandopborges/"
+							class="fa fa-linkedin"
+						></a>
+						<a
+							href="https://www.instagram.com/ferviporai/"
+							class="fa fa-instagram"
+						></a>
+					</div>
+				</v-col>
+			</v-row>
+		</v-container>
 		<v-container>
 			<v-row class="footerBottom">
 				<v-col>
 					<div class="caption text-center">
-						&copy;All rigths reserved {{ currentYear }}. Fernando Pereira Borges
+						&copy;{{ currentYear }} Fernando Pereira Borges. All Rigths
+						Reserved.
 					</div>
 				</v-col>
 			</v-row>
@@ -53,6 +95,7 @@
 	.Footer {
 		background-color: black;
 		color: white;
+		margin-top: 5%;
 		/* min-height: 20%; */
 	}
 
@@ -98,5 +141,8 @@
 			#515bd4
 		);
 		color: white;
+	}
+	ul {
+		list-style-type: none;
 	}
 </style>
