@@ -2,6 +2,7 @@
 	<div class="Skills">
 		<v-container>
 			<h1>My Developed Skills</h1>
+			*Examples*
 			<canvas id="planet-chart"></canvas>
 			<canvas id="my-chart"></canvas>
 		</v-container>
