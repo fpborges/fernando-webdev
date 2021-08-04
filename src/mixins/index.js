@@ -1,0 +1,1 @@
+export { skillsMixinsData } from "./skillsMixins";
