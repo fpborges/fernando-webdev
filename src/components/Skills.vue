@@ -9,9 +9,6 @@
 						<v-card-text>
 							<canvas class="frontend"></canvas>
 						</v-card-text>
-						<v-card-actions>
-							<v-btn @click="randColors()">Randomize Colors</v-btn>
-						</v-card-actions>
 					</v-card>
 				</v-col>
 				<v-col>
@@ -40,22 +37,13 @@
 					</v-card>
 				</v-col>
 			</v-row>
-			<canvas id="my-skills"></canvas>
-			<canvas id="myChart" width="400" height="400"></canvas>
 		</v-container>
 	</div>
 </template>
 
 <script>
 	import { skillsMixinsData } from "../mixins";
-	import {
-		mySkills,
-		myChart,
-		frontEnd,
-		backEnd,
-		desingSkills,
-	} from "../charts/skillsData.js";
-	import myFunctions from "@/charts/skillsData";
+	import { frontEnd, backEnd, desingSkills } from "../charts/skillsData.js";
 
 	import Chart from "chart.js";
 
@@ -63,30 +51,20 @@
 		name: "Skills",
 		mixins: [skillsMixinsData],
 		data: () => ({
-			mySkills,
-			myChart,
 			frontEnd,
 			backEnd,
 			desingSkills,
 		}),
 		mounted() {
-			const ctx = document.querySelector("#my-skills");
-			const ctx2 = document.querySelector("#myChart");
 			const frontSelector = document.querySelector(".frontend");
 			const backSelector = document.querySelector(".backend");
 			const designSelector = document.querySelector(".design");
 
-			new Chart(ctx, this.mySkills);
-			new Chart(ctx2, this.myChart);
 			new Chart(frontSelector, this.frontEnd);
 			new Chart(backSelector, this.backEnd);
 			new Chart(designSelector, this.desingSkills);
 		},
-		methods: {
-			randColors() {
-				myFunctions.randCol();
-			},
-		},
+		methods: {},
 	};
 </script>
 
