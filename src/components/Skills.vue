@@ -3,7 +3,7 @@
 		<v-container>
 			<h1>My Developed Skills</h1>
 			<v-row>
-				<v-col cols="12">
+				<v-col>
 					<v-card elevation="2">
 						<v-card-title>Frontend Skills</v-card-title>
 						<v-card-text>
