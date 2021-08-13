@@ -3,7 +3,7 @@
 		<v-container>
 			<h1>My Developed Skills</h1>
 			<v-row>
-				<v-col>
+				<v-col cols="12">
 					<v-card elevation="2">
 						<v-card-title>Frontend Skills</v-card-title>
 						<v-card-text>
@@ -25,14 +25,15 @@
 					<v-card elevation="2">
 						<v-card-title>Design Skills</v-card-title>
 						<v-card-text>
-							<!-- photoshop
-							justinmind
-							elementor
-							chartjs
-							d3.js
-							MockFlow
-							camtasia Video Editor -->
 							<canvas class="design"></canvas>
+						</v-card-text>
+					</v-card>
+				</v-col>
+				<v-col>
+					<v-card elevation="2">
+						<v-card-title>Other Skills</v-card-title>
+						<v-card-text>
+							<canvas class="other"></canvas>
 						</v-card-text>
 					</v-card>
 				</v-col>
@@ -43,7 +44,12 @@
 
 <script>
 	import { skillsMixinsData } from "../mixins";
-	import { frontEnd, backEnd, desingSkills } from "../charts/skillsData.js";
+	import {
+		frontEnd,
+		backEnd,
+		desingSkills,
+		otherSkills,
+	} from "../charts/skillsData.js";
 
 	import Chart from "chart.js";
 
@@ -54,15 +60,18 @@
 			frontEnd,
 			backEnd,
 			desingSkills,
+			otherSkills,
 		}),
 		mounted() {
 			const frontSelector = document.querySelector(".frontend");
 			const backSelector = document.querySelector(".backend");
 			const designSelector = document.querySelector(".design");
+			const otherSelector = document.querySelector(".other");
 
 			new Chart(frontSelector, this.frontEnd);
 			new Chart(backSelector, this.backEnd);
 			new Chart(designSelector, this.desingSkills);
+			new Chart(otherSelector, this.otherSkills);
 		},
 		methods: {},
 	};

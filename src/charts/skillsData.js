@@ -3,7 +3,7 @@ import state from "@/store/skills/moduleSkillsState.js";
 
 //Set global animation duration
 Chart.defaults.global.animation.duration = 3000;
-Chart.defaults.global.legend.display = false;
+// Chart.defaults.global.legend.display = true;
 
 function randomColors() {
 	let barColors = [];
@@ -37,6 +37,9 @@ export const frontEnd = {
 		],
 	},
 	options: {
+		legend: {
+			display: false,
+		},
 		animation: {
 			duration: 3000,
 		},
@@ -60,7 +63,7 @@ export const frontEnd = {
 						},
 					},
 					gridLines: {
-						display: true,
+						display: false,
 					},
 				},
 			],
@@ -82,37 +85,53 @@ export const frontEnd = {
 export const backEnd = {
 	type: "horizontalBar",
 	data: {
-		labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+		labels: [
+			"Python",
+			"C#",
+			"Node.js",
+			"Restful-API",
+			"MongoDB ",
+			"MySQL",
+			"SQL Server",
+			"AWS Servers",
+		],
 		datasets: [
 			{
 				label: "# of Votes",
-				data: [12, 19, 3, 5, 2, 3],
-				backgroundColor: [
-					"rgba(255, 99, 132, 0.2)",
-					"rgba(54, 162, 235, 0.2)",
-					"rgba(255, 206, 86, 0.2)",
-					"rgba(75, 192, 192, 0.2)",
-					"rgba(153, 102, 255, 0.2)",
-					"rgba(255, 159, 64, 0.2)",
-				],
-				borderColor: [
-					"rgba(255, 99, 132, 1)",
-					"rgba(54, 162, 235, 1)",
-					"rgba(255, 206, 86, 1)",
-					"rgba(75, 192, 192, 1)",
-					"rgba(153, 102, 255, 1)",
-					"rgba(255, 159, 64, 1)",
-				],
+				data: [40, 50, 45, 30, 25, 85, 75, 30],
+				backgroundColor: randomColors(),
+				borderColor: randomColors(),
 				borderWidth: 1,
 			},
 		],
 	},
 	options: {
+		legend: {
+			display: false,
+		},
 		scales: {
+			xAxes: [
+				{
+					ticks: {
+						beginAtZero: true,
+						max: 100,
+						stepSize: 10,
+						callback: (value) => {
+							return value + "%";
+						},
+					},
+					gridLines: {
+						display: false,
+					},
+				},
+			],
 			yAxes: [
 				{
 					ticks: {
 						beginAtZero: true,
+					},
+					gridLines: {
+						display: false,
 					},
 				},
 			],
@@ -159,6 +178,9 @@ export const desingSkills = {
 		],
 	},
 	options: {
+		legend: {
+			display: false,
+		},
 		responsive: true,
 		lineTension: 1,
 		scales: {
@@ -168,6 +190,124 @@ export const desingSkills = {
 						beginAtZero: true,
 						padding: 25,
 						max: 100,
+						callback: (value) => {
+							return value + "%";
+						},
+					},
+					gridLines: {
+						display: false,
+					},
+				},
+			],
+			xAxes: [
+				{
+					gridLines: {
+						display: false,
+					},
+				},
+			],
+		},
+	},
+};
+
+export const otherSkills = {
+	type: "doughnut",
+	data: {
+		labels: [
+			"photoshop",
+			"elementor",
+			"Balsamiq",
+			"Mockflow",
+			"chartjs",
+			"justinmind",
+			"D3.js",
+			"Bootstrap",
+		],
+		datasets: [
+			{
+				label: "",
+				data: [35, 55, 15, 65, 70, 85, 40, 90],
+				backgroundColor: "rgba(54,73,93,.5)",
+				borderColor: "#36495d",
+				borderWidth: 3,
+
+				pointRadius: 6,
+				pointBackgroundColor: "black",
+				hitRadius: 6,
+				// hoverBorder: 1,
+				// pointHoverBorderWidth: 8,
+				// pointHoverRadius: 8,
+			},
+		],
+	},
+	options: {
+		responsive: true,
+		lineTension: 1,
+		scales: {
+			yAxes: [
+				{
+					ticks: {
+						display: false,
+					},
+					gridLines: {
+						display: false,
+					},
+				},
+			],
+			xAxes: [
+				{
+					gridLines: {
+						display: false,
+					},
+				},
+			],
+		},
+	},
+};
+
+export const otherSkills2 = {
+	type: "radar",
+	data: {
+		labels: [
+			"photoshop",
+			"elementor",
+			"Balsamiq",
+			"Mockflow",
+			"chartjs",
+			"justinmind",
+			"D3.js",
+			"Bootstrap",
+		],
+		datasets: [
+			{
+				label: "",
+				data: [35, 55, 15, 65, 70, 85, 40, 90],
+				backgroundColor: "rgba(54,73,93,.5)",
+				borderColor: "#36495d",
+				borderWidth: 3,
+
+				pointRadius: 6,
+				pointBackgroundColor: "black",
+				hitRadius: 6,
+				// hoverBorder: 1,
+				// pointHoverBorderWidth: 8,
+				// pointHoverRadius: 8,
+			},
+		],
+	},
+	options: {
+		responsive: true,
+		lineTension: 1,
+		scales: {
+			yAxes: [
+				{
+					ticks: {
+						beginAtZero: true,
+						padding: 25,
+						max: 100,
+						callback: (value) => {
+							return value + "%";
+						},
 					},
 					gridLines: {
 						display: true,
@@ -185,6 +325,4 @@ export const desingSkills = {
 	},
 };
 
-// create other skills
-
-export default { frontEnd, desingSkills };
+export default { frontEnd, desingSkills, otherSkills, otherSkills2 };
