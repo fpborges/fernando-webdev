@@ -22,6 +22,13 @@ function randomColors() {
 	return barColors;
 }
 
+const toolTipPercent = {
+	label: function (tooltipItem, data) {
+		var value = data.datasets[0].data[tooltipItem.index];
+		return "experience: " + value + "%";
+	},
+};
+
 export const frontEnd = {
 	type: "horizontalBar",
 	data: {
@@ -37,6 +44,8 @@ export const frontEnd = {
 		],
 	},
 	options: {
+		responsive: true,
+		aspectRatio: 2,
 		legend: {
 			display: false,
 		},
@@ -44,12 +53,7 @@ export const frontEnd = {
 			duration: 3000,
 		},
 		tooltips: {
-			callbacks: {
-				label: function (tooltipItem, data) {
-					var value = data.datasets[0].data[tooltipItem.index];
-					return "experience: " + value + "%";
-				},
-			},
+			callbacks: toolTipPercent,
 		},
 		scales: {
 			xAxes: [
@@ -57,7 +61,7 @@ export const frontEnd = {
 					ticks: {
 						beginAtZero: true,
 						max: 100,
-						stepSize: 10,
+						stepSize: 20,
 						callback: (value) => {
 							return value + "%";
 						},
@@ -109,13 +113,18 @@ export const backEnd = {
 		legend: {
 			display: false,
 		},
+		tooltips: {
+			callbacks: toolTipPercent,
+		},
+		aspectRatio: 2,
+		responsive: true,
 		scales: {
 			xAxes: [
 				{
 					ticks: {
 						beginAtZero: true,
 						max: 100,
-						stepSize: 10,
+						stepSize: 20,
 						callback: (value) => {
 							return value + "%";
 						},
@@ -139,14 +148,6 @@ export const backEnd = {
 	},
 };
 
-// <!-- photoshop
-// 						justinmind
-// 						elementor
-// 						chartjs
-// 						d3.js
-// 						MockFlow
-// 						camtasia Video Editor -->
-
 export const desingSkills = {
 	type: "line",
 	data: {
@@ -164,16 +165,13 @@ export const desingSkills = {
 			{
 				label: "",
 				data: [35, 55, 15, 65, 70, 85, 40, 90],
-				backgroundColor: "rgba(54,73,93,.5)",
-				borderColor: "#36495d",
+				backgroundColor: "#64B5F6",
+				borderColor: "#0D47A1",
 				borderWidth: 3,
 
-				pointRadius: 6,
-				pointBackgroundColor: "black",
-				hitRadius: 6,
-				// hoverBorder: 1,
-				// pointHoverBorderWidth: 8,
-				// pointHoverRadius: 8,
+				pointRadius: 5,
+				pointBackgroundColor: "#0D47A1",
+				hitRadius: 5,
 			},
 		],
 	},
@@ -181,7 +179,11 @@ export const desingSkills = {
 		legend: {
 			display: false,
 		},
+		tooltips: {
+			callbacks: toolTipPercent,
+		},
 		responsive: true,
+		aspectRatio: 2,
 		lineTension: 1,
 		scales: {
 			yAxes: [
@@ -189,6 +191,7 @@ export const desingSkills = {
 					ticks: {
 						beginAtZero: true,
 						padding: 25,
+						stepSize: 20,
 						max: 100,
 						callback: (value) => {
 							return value + "%";
@@ -211,8 +214,17 @@ export const desingSkills = {
 };
 
 export const otherSkills = {
-	type: "doughnut",
+	type: "polarArea",
 	data: {
+		datasets: [
+			{
+				label: "",
+				data: [35, 55, 15, 65, 70, 85, 40, 90],
+				backgroundColor: randomColors(),
+				borderColor: "white",
+				borderWidth: 3,
+			},
+		],
 		labels: [
 			"photoshop",
 			"elementor",
@@ -223,26 +235,23 @@ export const otherSkills = {
 			"D3.js",
 			"Bootstrap",
 		],
-		datasets: [
-			{
-				label: "",
-				data: [35, 55, 15, 65, 70, 85, 40, 90],
-				backgroundColor: "rgba(54,73,93,.5)",
-				borderColor: "#36495d",
-				borderWidth: 3,
-
-				pointRadius: 6,
-				pointBackgroundColor: "black",
-				hitRadius: 6,
-				// hoverBorder: 1,
-				// pointHoverBorderWidth: 8,
-				// pointHoverRadius: 8,
-			},
-		],
 	},
 	options: {
 		responsive: true,
 		lineTension: 1,
+		aspectRatio: 2,
+		legend: {
+			display: false,
+		},
+		tooltips: {
+			callbacks: {
+				label: function (tooltipItem, data) {
+					let value = data.datasets[0].data[tooltipItem.index];
+					let label = data.labels[tooltipItem.index];
+					return label + ": " + value + "%";
+				},
+			},
+		},
 		scales: {
 			yAxes: [
 				{
@@ -289,9 +298,6 @@ export const otherSkills2 = {
 				pointRadius: 6,
 				pointBackgroundColor: "black",
 				hitRadius: 6,
-				// hoverBorder: 1,
-				// pointHoverBorderWidth: 8,
-				// pointHoverRadius: 8,
 			},
 		],
 	},
