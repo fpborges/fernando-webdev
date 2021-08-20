@@ -8,26 +8,46 @@
 				</v-col>
 			</v-row>
 			<v-row justify="center">
-				<v-expansion-panels popout>
-					<v-expansion-panel>
-						<v-expansion-panel-header
-							>test
-							<!-- <img
-								src="https://i.ibb.co/VB0ZDcK/Globo-com-logo-stacked-svg.png"
-								alt="Globo-com-logo-stacked-svg"
-								border="0"
-								width="50"
-								height="auto"
-							/> -->
-						</v-expansion-panel-header>
-						<v-expansion-panel-content>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat.
-						</v-expansion-panel-content>
-					</v-expansion-panel>
-				</v-expansion-panels>
+				<v-col md="3" v-for="(card, i) in canadaCompanies" :key="card.id">
+					<v-card class="mx-auto" max-width="344">
+						<v-img :src="card.logo" height="200px"></v-img>
+
+						<v-card-title> {{ card.companyName }} </v-card-title>
+
+						<v-card-subtitle> {{ card.description }} </v-card-subtitle>
+
+						<v-card-actions>
+							<v-btn
+								color="orange lighten-2"
+								@click="$set(show, i, !show[i])"
+								text
+							>
+								Explore
+							</v-btn>
+
+							<v-spacer></v-spacer>
+
+							<!-- <v-btn icon @click="show = !show">
+								<v-icon>{{
+									show ? "mdi-chevron-up" : "mdi-chevron-down"
+								}}</v-icon>
+							</v-btn> -->
+						</v-card-actions>
+
+						<v-expand-transition>
+							<div v-show="show[i]">
+								<v-divider></v-divider>
+
+								<v-card-text>
+									<p class="text-h5 text--primary">
+										{{ card.jobTitle }}
+									</p>
+									<p>{{ card.jobDescription }}</p>
+								</v-card-text>
+							</div>
+						</v-expand-transition>
+					</v-card>
+				</v-col>
 			</v-row>
 			<v-row>
 				<v-col cols="12">
@@ -35,17 +55,15 @@
 				</v-col>
 			</v-row>
 			<v-row justify="center">
-				<v-expansion-panels popout>
-					<v-expansion-panel>
-						<v-expansion-panel-header>Item</v-expansion-panel-header>
-						<v-expansion-panel-content>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat.
-						</v-expansion-panel-content>
-					</v-expansion-panel>
-				</v-expansion-panels>
+				<v-col md="3" v-for="card in 4" :key="card">
+					<v-card>
+						<v-card-title> test </v-card-title>
+						<v-card-text> text test </v-card-text>
+						<v-card-actions>
+							<v-btn text>Expand</v-btn>
+						</v-card-actions>
+					</v-card>
+				</v-col>
 			</v-row>
 		</v-container>
 	</div>
@@ -55,9 +73,47 @@
 	export default {
 		name: "Experience",
 		data: () => ({
-			workExpBrazil: ["a", "b", "c"],
-			workExpCanada: ["a", "b", "c"],
+			show: [false, false, false, false],
+			canadaCompanies: [
+				{
+					id: "pmg",
+					companyName: "PMG Intelligence",
+					logo: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
+					url: "timhortons.ca",
+					description: "Cafe store",
+					jobTitle: "Customer Services",
+					jobDescription: "Public service",
+				},
+				{
+					id: "conestogac",
+					companyName: "Conestoga College",
+					logo: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
+					url: "timhortons.ca",
+					description: "Cafe store",
+					jobTitle: "Customer Services",
+					jobDescription: "Public service",
+				},
+				{
+					id: "toyotab",
+					companyName: "Toyota Boshoku",
+					logo: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
+					url: "timhortons.ca",
+					description: "Cafe store",
+					jobTitle: "Customer Services",
+					jobDescription: "Public service",
+				},
+				{
+					id: "timh",
+					companyName: "Tim Hortons",
+					logo: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
+					url: "timhortons.ca",
+					description: "Cafe store",
+					jobTitle: "Customer Services",
+					jobDescription: "Public service",
+				},
+			],
 		}),
+		methods: {},
 	};
 </script>
 
