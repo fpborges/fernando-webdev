@@ -17,21 +17,11 @@
 						<v-card-subtitle> {{ card.description }} </v-card-subtitle>
 
 						<v-card-actions>
-							<v-btn
-								color="orange lighten-2"
-								@click="$set(show, i, !show[i])"
-								text
-							>
-								Explore
+							<v-btn color="indigo" @click="$set(show, i, !show[i])" text>
+								{{ card.jobTitle }}
 							</v-btn>
 
 							<v-spacer></v-spacer>
-
-							<!-- <v-btn icon @click="show = !show">
-								<v-icon>{{
-									show ? "mdi-chevron-up" : "mdi-chevron-down"
-								}}</v-icon>
-							</v-btn> -->
 						</v-card-actions>
 
 						<v-expand-transition>
@@ -39,8 +29,11 @@
 								<v-divider></v-divider>
 
 								<v-card-text>
-									<p class="text-h5 text--primary">
+									<p class="text-h6 text--primary">
 										{{ card.jobTitle }}
+									</p>
+									<p>
+										Work Period: <b>{{ card.workPeriod }}</b>
 									</p>
 									<p>{{ card.jobDescription }}</p>
 								</v-card-text>
@@ -78,38 +71,50 @@
 				{
 					id: "pmg",
 					companyName: "PMG Intelligence",
-					logo: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
-					url: "timhortons.ca",
-					description: "Cafe store",
-					jobTitle: "Customer Services",
-					jobDescription: "Public service",
+					logo: "https://i.ibb.co/gzyF3X7/pmg.png",
+					url: "https://www.pmgintelligence.com/",
+					description:
+						"PMG is a highly experienced market research and intelligence agency with advanced skillsets in mathematics, psychology, sociology, business, and economics.",
+					jobTitle: "Web Developer",
+					workPeriod: "2018 - Present",
+					jobDescription:
+						"Designing, developing, maintaining, and testing responsive Web-based applications. Identifying, researching, and modifying codes for best solutions. Planning and creating Web Pages Prototype. Translate UI/UX design wireframes to actual code.",
 				},
 				{
 					id: "conestogac",
 					companyName: "Conestoga College",
-					logo: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
-					url: "timhortons.ca",
-					description: "Cafe store",
-					jobTitle: "Customer Services",
-					jobDescription: "Public service",
+					logo: "https://pbs.twimg.com/profile_images/875382707647242240/01YS8FlR.jpg",
+					url: "https://www.conestogac.on.ca/",
+					description:
+						"Conestoga is a leader in polytechnic education and one of Ontario's fastest growing colleges, delivering a full range of career-focused education, and applied research programs.",
+					jobTitle: "Social Media Ambassador",
+					workPeriod: "2017 - 2018",
+					jobDescription:
+						"Worked as Social Media Ambassador in order to connect Conestoga College to international students through content creation, social media, and digital recruitment support.",
 				},
 				{
 					id: "toyotab",
 					companyName: "Toyota Boshoku",
-					logo: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
-					url: "timhortons.ca",
-					description: "Cafe store",
-					jobTitle: "Customer Services",
-					jobDescription: "Public service",
+					logo: "https://www.toyota-boshoku.com/global/img/common/ogp.png",
+					url: "https://toyotaboshoku.ca/",
+					description:
+						"Toyota Boshoku Corporation business sites manufacture and sell automotive-related components such as automobile interior components and exterior components.",
+					jobTitle: "Assembler Team Member",
+					workPeriod: "2016",
+					jobDescription:
+						"Providing service in assembly duties, accuracy in the assembly of components. Work in fast pace environment, under pressure with tight deadlines, attention to detail to check parts for quality control.",
 				},
 				{
 					id: "timh",
 					companyName: "Tim Hortons",
-					logo: "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
+					logo: "https://peel.bigbrothersbigsisters.ca/wp-content/uploads/sites/160/2017/10/Tim-hortons-logo.jpg",
 					url: "timhortons.ca",
-					description: "Cafe store",
+					description:
+						"Tim Hortons is a multinational fast food restaurant chain. Tim Hortons serves coffee, doughnuts and other fast food items. It is Canada's largest quick-service restaurant.",
 					jobTitle: "Customer Services",
-					jobDescription: "Public service",
+					workPeriod: "2015",
+					jobDescription:
+						"Providing customer service, Work under pressure with tight deadlines using repetitive tasks, dispatching orders, preparing stations and preparing for revenue periods and cashier.",
 				},
 			],
 		}),
