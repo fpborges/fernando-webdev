@@ -50,7 +50,7 @@
 					<Skills />
 				</div>
 				<div v-if="id === 3">
-					<HelloWorld msg="Welcome to Your Vue.js App" />
+					<Projects />
 				</div>
 				<div v-if="id === 4">
 					<HelloWorld msg="Welcome to Your Vue.js App" />
@@ -84,6 +84,7 @@
 	import NetlifyForm from "../components/netlifyComponents/NetlifyForm.vue";
 	import AboutFernando from "../components/AboutFernando.vue";
 	import Experience from "../components/Experience.vue";
+	import Projects from "../components/Projects.vue";
 	import Skills from "../components/Skills.vue";
 	import Footer from "../components/Footer.vue";
 
@@ -95,6 +96,7 @@
 			NetlifyForm,
 			AboutFernando,
 			Experience,
+			Projects,
 			Skills,
 			Footer,
 		},
