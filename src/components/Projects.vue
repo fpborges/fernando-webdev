@@ -9,8 +9,8 @@
 				</v-col>
 			</v-row>
 			<v-row>
+				<h2>Web Applications</h2>
 				<v-col>
-					<h3>Web Applications</h3>
 					<div class="desktop">
 						<div class="content">
 							<a href="https://www.qbord.com/" target="blank">
@@ -26,7 +26,7 @@
 			<v-divider class="divider"></v-divider>
 
 			<v-row class="mt-10">
-				<h3>GitHub</h3>
+				<h2>GitHub</h2>
 				<v-col>
 					<v-card class="mx-auto" max-width="400">
 						<a href="https://github.com/fpborges/Word_Scramble_WCF_Project.git">
@@ -81,6 +81,11 @@
 
 						<v-card-actions> </v-card-actions>
 					</v-card>
+				</v-col>
+				<v-col cols="12">
+					<a href="https://github.com/fpborges"
+						><h2>Other Projects on GitHub...</h2></a
+					>
 				</v-col>
 			</v-row>
 		</v-container>
