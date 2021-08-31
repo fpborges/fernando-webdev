@@ -22,22 +22,65 @@
 					</div>
 				</v-col>
 			</v-row>
+
+			<v-divider class="divider"></v-divider>
+
 			<v-row class="mt-10">
 				<h3>GitHub</h3>
 				<v-col>
-					<p>Word Scrumble</p>
-					<a href="https://github.com/fpborges/Word_Scramble_WCF_Project.git">
-						<img
-							src="https://word.tips/pictures/d45ff610-e6f5-4f4c-a04e-1e1bc3c3bd1a_scramble_words.jpg?auto=compress,format"
-					/></a>
+					<v-card class="mx-auto" max-width="400">
+						<a href="https://github.com/fpborges/Word_Scramble_WCF_Project.git">
+							<v-img
+								class="white--text align-end"
+								height="200px"
+								src="https://word.tips/pictures/d45ff610-e6f5-4f4c-a04e-1e1bc3c3bd1a_scramble_words.jpg?auto=compress,format"
+							>
+								<v-card-title class="card-title">Word Scrumble</v-card-title>
+							</v-img>
+						</a>
+
+						<v-card-subtitle class="pb-0"> About </v-card-subtitle>
+
+						<v-card-text class="text--primary">
+							<div>
+								This project is a multi-player version of a WordScramble game
+								and consists of two Visual Studio projects: the service
+								application (a WCF library) and the client app (console app).
+								WCF multi-player Client and Service applications. To play the
+								game with multiple users launch the service in Visual Studio and
+								launch the client app on Windows Explore…
+							</div>
+						</v-card-text>
+
+						<v-card-actions> </v-card-actions>
+					</v-card>
 				</v-col>
+				<v-divider vertical></v-divider>
 				<v-col>
-					<p>Exp Trip mobile app</p>
-					<a href="https://github.com/fpborges/ExpTrip.git">
-						<img
-							src="https://github.com/fpborges/ExpTrip/blob/master/images/img_welcome.jpg?raw=true"
-							height="400"
-					/></a>
+					<v-card class="mx-auto" max-width="400">
+						<a href="https://github.com/fpborges/ExpTrip.git">
+							<v-img
+								class="white--text align-end"
+								height="200px"
+								src="https://github.com/fpborges/ExpTrip/blob/master/images/img_welcome.jpg?raw=true"
+							>
+								<v-card-title class="card-title"
+									>Exp Trip mobile app</v-card-title
+								>
+							</v-img>
+						</a>
+
+						<v-card-subtitle class="pb-0"> About </v-card-subtitle>
+
+						<v-card-text class="text--primary">
+							<div>
+								This is an Android app project that helps people to organize
+								travels. Some features and database changes to be made.
+							</div>
+						</v-card-text>
+
+						<v-card-actions> </v-card-actions>
+					</v-card>
 				</v-col>
 			</v-row>
 		</v-container>
@@ -56,6 +99,15 @@
 <style scoped>
 	h2 {
 		float: left;
+	}
+	.divider {
+		margin-top: 5%;
+	}
+	.card-title {
+		-webkit-text-stroke: 1px black; /* width and color */
+		color: white;
+		font-size: 25px;
+		font-weight: 900;
 	}
 	.dot {
 		height: 15px;
