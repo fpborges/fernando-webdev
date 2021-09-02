@@ -53,7 +53,7 @@
 					<Projects />
 				</div>
 				<div v-if="id === 4">
-					<HelloWorld msg="Welcome to Your Vue.js App" />
+					<Hobbies />
 				</div>
 				<div v-if="id === 5">
 					<NetlifyForm />
@@ -80,24 +80,26 @@
 <script>
 	// @ is an alias to /src
 	import Header from "../components/Header.vue";
-	import HelloWorld from "../components/HelloWorld.vue";
+	// import HelloWorld from "../components/HelloWorld.vue";
 	import NetlifyForm from "../components/netlifyComponents/NetlifyForm.vue";
 	import AboutFernando from "../components/AboutFernando.vue";
 	import Experience from "../components/Experience.vue";
 	import Projects from "../components/Projects.vue";
 	import Skills from "../components/Skills.vue";
+	import Hobbies from "../components/Hobbies.vue";
 	import Footer from "../components/Footer.vue";
 
 	export default {
 		name: "Home",
 		components: {
 			Header,
-			HelloWorld,
+			// HelloWorld,
 			NetlifyForm,
 			AboutFernando,
 			Experience,
 			Projects,
 			Skills,
+			Hobbies,
 			Footer,
 		},
 		data: () => ({
