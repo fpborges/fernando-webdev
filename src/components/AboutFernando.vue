@@ -1,6 +1,6 @@
 <template>
 	<div class="AboutFernando">
-		<v-row class="mt-10" align="center" justify="center">
+		<v-row class="" align="center" justify="center">
 			<v-col cols="9">
 				<h1>About me</h1>
 			</v-col>

@@ -1,5 +1,5 @@
 <template>
-	<v-card class="mx-auto mt-10 mb-10" max-width="640" elevation="2" outlined>
+	<v-card class="mx-auto" max-width="640" elevation="2" outlined>
 		<v-card-title id="contact"> Contact me </v-card-title>
 		<v-alert
 			v-model="successAlert"

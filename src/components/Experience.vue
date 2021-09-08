@@ -1,6 +1,6 @@
 <template>
 	<div class="Experience">
-		<v-container class="mt-10">
+		<v-container class="">
 			<h1 class="text-center">Relevant Experiences</h1>
 			<v-row>
 				<v-col cols="12">

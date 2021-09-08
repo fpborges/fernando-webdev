@@ -21,7 +21,7 @@
 			<v-tabs v-model="tab" centered align-with-title>
 				<v-tabs-slider color="#311B92"></v-tabs-slider>
 				<v-tab v-for="(item, index) in tabMenu" :key="index">
-					{{ item }}
+					<a :href="'#' + item.id">{{ item.title }}</a>
 				</v-tab>
 			</v-tabs>
 
@@ -33,7 +33,7 @@
 			</v-btn>
 		</v-app-bar>
 
-		<v-tabs-items v-model="tab">
+		<!-- <v-tabs-items v-model="tab">
 			<v-tab-item
 				eager
 				v-for="(item, id) in tabMenu"
@@ -59,7 +59,26 @@
 					<NetlifyForm />
 				</div>
 			</v-tab-item>
-		</v-tabs-items>
+		</v-tabs-items> -->
+
+		<div :id="tabMenu[0].id">
+			<AboutFernando />
+		</div>
+		<div :id="tabMenu[1].id">
+			<Experience />
+		</div>
+		<div :id="tabMenu[2].id">
+			<Skills />
+		</div>
+		<div :id="tabMenu[3].id">
+			<Projects />
+		</div>
+		<div :id="tabMenu[4].id">
+			<Hobbies />
+		</div>
+		<div :id="tabMenu[5].id">
+			<NetlifyForm />
+		</div>
 		<v-btn
 			v-scroll="onScroll"
 			v-show="fab"
@@ -106,12 +125,12 @@
 			tab: null,
 			fab: false,
 			tabMenu: [
-				"Who is Fernando",
-				"Experience",
-				"Skills",
-				"Projects",
-				"Hobbies",
-				"Contact me",
+				{ title: "Who is Fernando", id: "aboutf" },
+				{ title: "Experience", id: "expf" },
+				{ title: "Skills", id: "skillsf" },
+				{ title: "Projects", id: "projf" },
+				{ title: "Hobbies", id: "hobbyf" },
+				{ title: "Contact me", id: "contactf" },
 			],
 		}),
 		methods: {
@@ -128,5 +147,23 @@
 <style>
 	.home {
 		height: 100vh;
+	}
+	#aboutf {
+		background-color: green;
+	}
+	#expf {
+		background-color: blue;
+	}
+	#skillsf {
+		background-color: yellow;
+	}
+	#projf {
+		background-color: gray;
+	}
+	#hobbyf {
+		background-color: red;
+	}
+	#contactf {
+		background-color: indigo;
 	}
 </style>
