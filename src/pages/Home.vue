@@ -149,21 +149,35 @@
 		height: 100vh;
 	}
 	#aboutf {
-		background-color: green;
+		background-color: #00897b;
+		padding: 5%;
+		color: white;
 	}
 	#expf {
-		background-color: blue;
+		background-color: #01579b;
+		padding: 5%;
+		color: white;
 	}
 	#skillsf {
-		background-color: yellow;
+		background-color: #4a148c;
+		padding: 5%;
+		color: white;
 	}
 	#projf {
-		background-color: gray;
+		background-color: #006064;
+		padding: 5%;
+		color: white;
 	}
 	#hobbyf {
-		background-color: red;
+		background-color: #3949ab;
+		padding: 5%;
+		color: white;
 	}
 	#contactf {
-		background-color: indigo;
+		background-color: #546e7a;
+		padding: 5%;
+	}
+	a:link {
+		text-decoration: none;
 	}
 </style>

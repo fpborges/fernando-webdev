@@ -95,7 +95,7 @@
 	.Footer {
 		background-color: black;
 		color: white;
-		margin-top: 5%;
+		/* margin-top: 5%; */
 		/* min-height: 20%; */
 	}
 
