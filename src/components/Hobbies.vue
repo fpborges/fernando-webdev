@@ -95,7 +95,7 @@
 				</v-col>
 				<v-col cols="md-4">
 					<div>
-						<v-card class="mx-auto" max-width="400" elevation="2">
+						<v-card class="" max-width="" elevation="2">
 							<img
 								src="https://www.reviewsxp.com/blog/wp-content/uploads/2020/01/best-social-networking-sites-850x491.jpg"
 							/>
