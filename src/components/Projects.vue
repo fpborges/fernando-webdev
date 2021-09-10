@@ -132,9 +132,9 @@
 	.desktop {
 		content: "";
 		position: relative;
-		left: 10%;
-		width: 400px;
-		height: 300px;
+		/* left: 10%; */
+		width: 350px;
+		height: 250px;
 		border-radius: 6px;
 		border-style: solid;
 		border-color: black;
@@ -161,8 +161,8 @@
 
 	/* The screen (or content) of the device */
 	.desktop .content {
-		width: 350px;
-		height: 250px;
+		width: 300px;
+		height: 200px;
 		overflow: hidden;
 		border: none;
 		background: white;
