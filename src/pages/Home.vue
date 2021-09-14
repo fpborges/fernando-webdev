@@ -33,33 +33,31 @@
 			</v-btn>
 		</v-app-bar>
 
-		<!-- <v-tabs-items v-model="tab">
-			<v-tab-item
-				eager
-				v-for="(item, id) in tabMenu"
-				:key="id"
-				transition="fade-transition"
-			>
-				<div v-if="id === 0">
-					<AboutFernando />
-				</div>
-				<div v-if="id === 1">
-					<Experience />
-				</div>
-				<div v-if="id === 2">
-					<Skills />
-				</div>
-				<div v-if="id === 3">
-					<Projects />
-				</div>
-				<div v-if="id === 4">
-					<Hobbies />
-				</div>
-				<div v-if="id === 5">
-					<NetlifyForm />
-				</div>
-			</v-tab-item>
-		</v-tabs-items> -->
+		<!-- <div>
+			<v-toolbar>
+				<v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+				<v-toolbar-title>Vuetify</v-toolbar-title>
+
+				<v-spacer></v-spacer>
+
+				<v-btn icon>
+					<v-icon>mdi-export</v-icon>
+				</v-btn>
+			</v-toolbar>
+		</div> -->
+		<v-btn
+			v-scroll="onScroll"
+			v-show="fab"
+			fab
+			dark
+			fixed
+			top
+			left
+			color="primary"
+		>
+			<v-icon>mdi-menu</v-icon>
+		</v-btn>
 
 		<div :id="tabMenu[0].id">
 			<AboutFernando />
@@ -138,7 +136,7 @@
 				console.log("scroll");
 				if (typeof window === "undefined") return;
 				const top = window.pageYOffset || e.target.scrollTop || 0;
-				this.fab = top > 800;
+				this.fab = top > 750;
 			},
 		},
 	};
@@ -148,33 +146,29 @@
 	.home {
 		height: 100vh;
 	}
+
 	#aboutf {
-		background-color: #00897b;
+		background-color: #f5f5f5;
 		padding: 5%;
-		color: white;
 	}
 	#expf {
-		background-color: #01579b;
+		background-color: #eeeeee;
 		padding: 5%;
-		color: white;
 	}
 	#skillsf {
-		background-color: #4a148c;
+		background-color: #f5f5f5;
 		padding: 5%;
-		color: white;
 	}
 	#projf {
-		background-color: #006064;
+		background-color: #eeeeee;
 		padding: 5%;
-		color: white;
 	}
 	#hobbyf {
-		background-color: #3949ab;
+		background-color: #f5f5f5;
 		padding: 5%;
-		color: white;
 	}
 	#contactf {
-		background-color: #546e7a;
+		background-color: #eeeeee;
 		padding: 5%;
 	}
 	a:link {
