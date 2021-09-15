@@ -46,7 +46,8 @@
 				</v-btn>
 			</v-toolbar>
 		</div> -->
-		<v-btn
+
+		<!-- <v-btn
 			v-scroll="onScroll"
 			v-show="fab"
 			fab
@@ -57,7 +58,31 @@
 			color="primary"
 		>
 			<v-icon>mdi-menu</v-icon>
-		</v-btn>
+		</v-btn> -->
+
+		<v-menu offset-y transition="slide-y-transition" rounded="b-xl">
+			<template v-slot:activator="{ on, attrs }">
+				<v-btn
+					v-scroll="onScroll"
+					v-bind="attrs"
+					v-on="on"
+					fab
+					dark
+					color="indigo"
+					v-show="fab"
+					fixed
+					top
+					left
+				>
+					<v-icon>mdi-menu </v-icon>
+				</v-btn>
+			</template>
+			<v-list dark>
+				<v-list-item v-for="(item, index) in tabMenu" :key="index"
+					><a :href="'#' + item.id" style="color: white">{{ item.title }}</a>
+				</v-list-item>
+			</v-list>
+		</v-menu>
 
 		<div :id="tabMenu[0].id">
 			<AboutFernando />
@@ -136,7 +161,7 @@
 				console.log("scroll");
 				if (typeof window === "undefined") return;
 				const top = window.pageYOffset || e.target.scrollTop || 0;
-				this.fab = top > 750;
+				this.fab = top > 900;
 			},
 		},
 	};
@@ -173,5 +198,8 @@
 	}
 	a:link {
 		text-decoration: none;
+	}
+	.v-application a {
+		color: #0b62a6;
 	}
 </style>
