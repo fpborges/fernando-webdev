@@ -88,18 +88,21 @@
 			<AboutFernando />
 		</div>
 		<div :id="tabMenu[1].id">
-			<Experience />
+			<Education />
 		</div>
 		<div :id="tabMenu[2].id">
-			<Skills />
+			<Experience />
 		</div>
 		<div :id="tabMenu[3].id">
-			<Projects />
+			<Skills />
 		</div>
 		<div :id="tabMenu[4].id">
-			<Hobbies />
+			<Projects />
 		</div>
 		<div :id="tabMenu[5].id">
+			<Hobbies />
+		</div>
+		<div :id="tabMenu[6].id">
 			<NetlifyForm />
 		</div>
 		<v-btn
@@ -125,6 +128,7 @@
 	// import HelloWorld from "../components/HelloWorld.vue";
 	import NetlifyForm from "../components/netlifyComponents/NetlifyForm.vue";
 	import AboutFernando from "../components/AboutFernando.vue";
+	import Education from "../components/Education.vue";
 	import Experience from "../components/Experience.vue";
 	import Projects from "../components/Projects.vue";
 	import Skills from "../components/Skills.vue";
@@ -138,6 +142,7 @@
 			// HelloWorld,
 			NetlifyForm,
 			AboutFernando,
+			Education,
 			Experience,
 			Projects,
 			Skills,
@@ -149,6 +154,7 @@
 			fab: false,
 			tabMenu: [
 				{ title: "Who is Fernando", id: "aboutf" },
+				{ title: "Education", id: "educ" },
 				{ title: "Experience", id: "expf" },
 				{ title: "Skills", id: "skillsf" },
 				{ title: "Projects", id: "projf" },
@@ -161,7 +167,7 @@
 				console.log("scroll");
 				if (typeof window === "undefined") return;
 				const top = window.pageYOffset || e.target.scrollTop || 0;
-				this.fab = top > 900;
+				this.fab = top > 950;
 			},
 		},
 	};
@@ -173,6 +179,10 @@
 	}
 
 	#aboutf {
+		background-color: #f5f5f5;
+		padding: 5%;
+	}
+	#educ {
 		background-color: #f5f5f5;
 		padding: 5%;
 	}
