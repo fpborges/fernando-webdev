@@ -2,7 +2,7 @@
 	<div class="AboutFernando">
 		<v-row class="" align="center" justify="center">
 			<v-col cols="9">
-				<h1>About me</h1>
+				<h1 class="indigo--text">About me</h1>
 			</v-col>
 		</v-row>
 

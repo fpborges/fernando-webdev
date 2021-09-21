@@ -1,7 +1,7 @@
 <template>
 	<div class="Experience">
 		<v-container class="">
-			<h1 class="text-center">Relevant Experiences</h1>
+			<h1 class="text-center indigo--text">Relevant Experiences</h1>
 			<v-row>
 				<v-col cols="12">
 					<h2>From Canada</h2>
@@ -10,7 +10,9 @@
 			<v-row justify="center">
 				<v-col md="3" v-for="(card, i) in canadaCompanies" :key="card.id">
 					<v-card class="mx-auto" max-width="344">
-						<v-img :src="card.logo" height="200px"></v-img>
+						<a :href="card.url" target="_blank"
+							><v-img :src="card.logo" height="250px"></v-img
+						></a>
 
 						<v-card-title> {{ card.companyName }} </v-card-title>
 
@@ -52,9 +54,11 @@
 				</v-col>
 			</v-row>
 			<v-row justify="center">
-				<v-col md="3" v-for="(card, i) in brazilCompanies" :key="card.id">
-					<v-card class="mx-auto" max-width="344">
-						<v-img :src="card.logo" height="200px"></v-img>
+				<v-col md="4" v-for="(card, i) in brazilCompanies" :key="card.id">
+					<v-card class="mx-auto" max-width="400">
+						<a :href="card.url" target="_blank"
+							><v-img :src="card.logo" height="250px"></v-img
+						></a>
 
 						<v-card-title> {{ card.companyName }} </v-card-title>
 
@@ -166,7 +170,7 @@
 				{
 					id: "orangeb",
 					companyName: "Orange Business Services",
-					logo: "https://www.bisinfotech.com/wp-content/uploads/2015/03/Orange-Business-Services.jpg",
+					logo: "https://download.logo.wine/logo/Orange_(India)/Orange_(India)-Logo.wine.png",
 					url: "https://www.orange.com/en",
 					description:
 						"Orange Business Services, the business services arm of Orange S.A., is a global integrator of communications products and services for multinational corporations.",

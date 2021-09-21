@@ -3,8 +3,8 @@
 		<v-container>
 			<v-row justify="center" no-gutters>
 				<v-col md="auto">
-					<h2>Live Projects</h2>
-					<div class="dot"></div>
+					<h1 class="indigo--text">Live Projects</h1>
+					<!-- <div class="dot"></div> -->
 					<!-- <v-card class="pa-2"> Live Projects </v-card><span class="dot"></span> -->
 				</v-col>
 			</v-row>
