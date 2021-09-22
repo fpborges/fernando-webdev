@@ -9,9 +9,9 @@
 			</v-row>
 			<v-row justify="center">
 				<v-col md="4" v-for="(card, i) in canadaStudies" :key="card.id">
-					<v-card class="mx-auto" max-width="500">
+					<v-card class="mx-auto" max-width="400">
 						<a :href="card.url" target="_blank"
-							><v-img :src="card.logo" height="250px"></v-img
+							><v-img :src="card.logo"></v-img
 						></a>
 
 						<v-card-title> {{ card.institution }} </v-card-title>
@@ -55,9 +55,9 @@
 			</v-row>
 			<v-row justify="center">
 				<v-col md="4" v-for="(card, i) in brazilStudies" :key="card.id">
-					<v-card class="mx-auto" max-width="500">
+					<v-card class="mx-auto" max-width="400">
 						<a :href="card.url" target="_blank"
-							><v-img :src="card.logo" height="250px"></v-img
+							><v-img :src="card.logo"></v-img
 						></a>
 
 						<v-card-title> {{ card.institution }} </v-card-title>
@@ -127,7 +127,7 @@
 					description: "",
 					program: "Business Administration",
 					studyPeriod: "2010 - 2013",
-					programDescription: "",
+					programDescription: "Post-Secondary",
 				},
 				{
 					id: "cefet",
@@ -137,7 +137,7 @@
 					description: "",
 					program: "Internet Systems Technology",
 					studyPeriod: "2003 - 2009",
-					programDescription: "",
+					programDescription: "Post-secondary",
 				},
 			],
 		}),
