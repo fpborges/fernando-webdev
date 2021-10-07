@@ -11,7 +11,7 @@
 				<v-col md="4" v-for="(card, i) in canadaStudies" :key="card.id">
 					<v-card class="mx-auto" max-width="400">
 						<a :href="card.url" target="_blank"
-							><v-img :src="card.logo"></v-img
+							><v-img height="200" :src="card.logo"></v-img
 						></a>
 
 						<v-card-title> {{ card.institution }} </v-card-title>
@@ -55,7 +55,7 @@
 			</v-row>
 			<v-row justify="center">
 				<v-col md="4" v-for="(card, i) in brazilStudies" :key="card.id">
-					<v-card class="mx-auto" max-width="400">
+					<v-card class="mx-auto" max-width="400" min-height="350">
 						<a :href="card.url" target="_blank"
 							><v-img :src="card.logo"></v-img
 						></a>
@@ -122,7 +122,7 @@
 				{
 					id: "veiga",
 					institution: "Veiga de Almeida",
-					logo: "https://pbs.twimg.com/profile_images/469179204035039232/mYt_oSGg_400x400.png",
+					logo: "https://www.mundodomarketing.com.br/mundodomarketing/images/materias/logo_UVA_em_alta.jpg",
 					url: "https://www.uva.br/",
 					description: "",
 					program: "Business Administration",
@@ -132,7 +132,7 @@
 				{
 					id: "cefet",
 					institution: "Cefet-RJ",
-					logo: "https://i1.sndcdn.com/avatars-000149555347-x27nfa-t500x500.jpg",
+					logo: "https://hybridformslab.files.wordpress.com/2019/03/cefet-rj.jpg",
 					url: "http://www.cefet-rj.br/",
 					description: "",
 					program: "Internet Systems Technology",

@@ -164,7 +164,6 @@
 		}),
 		methods: {
 			onScroll(e) {
-				console.log("scroll");
 				if (typeof window === "undefined") return;
 				const top = window.pageYOffset || e.target.scrollTop || 0;
 				this.fab = top > 950;
