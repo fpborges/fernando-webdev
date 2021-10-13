@@ -11,15 +11,14 @@
 			<v-row>
 				<h2>Web Applications</h2>
 				<v-col>
-					<div class="desktop">
-						<div class="content">
-							<a href="https://www.qbord.com/" target="blank">
-								<img
-									src="https://i.ibb.co/7jBMh69/qbord2.jpg"
-									style="border: none; height: 100%; margin-left: 2%"
-							/></a>
-						</div>
-					</div>
+					<v-card class="mx-auto" max-width="450">
+						<a href="https://www.qbord.com/" target="blank">
+							<img height="300px" src="https://i.ibb.co/7jBMh69/qbord2.jpg" />
+							<div class="overlay">
+								<div class="text">Qbord - Python / MySql / Bootstrap</div>
+							</div>
+						</a>
+					</v-card>
 				</v-col>
 			</v-row>
 
@@ -29,15 +28,22 @@
 				<h2>GitHub</h2>
 				<v-col>
 					<v-card class="mx-auto" max-width="400">
-						<a href="https://github.com/fpborges/Word_Scramble_WCF_Project.git">
-							<v-img
-								class="white--text align-end"
-								height="200px"
-								src="https://word.tips/pictures/d45ff610-e6f5-4f4c-a04e-1e1bc3c3bd1a_scramble_words.jpg?auto=compress,format"
+						<div class="container">
+							<a
+								href="https://github.com/fpborges/Word_Scramble_WCF_Project.git"
 							>
-								<v-card-title class="card-title">Word Scrumble</v-card-title>
-							</v-img>
-						</a>
+								<v-img
+									class="white--text align-end"
+									height="200px"
+									src="https://word.tips/pictures/d45ff610-e6f5-4f4c-a04e-1e1bc3c3bd1a_scramble_words.jpg?auto=compress,format"
+								>
+									<v-card-title class="card-title">Word Scrumble</v-card-title>
+								</v-img>
+								<!-- <div class="overlayslideleft">
+									<div class="textslideleft">Hello World</div>
+								</div> -->
+							</a>
+						</div>
 
 						<v-card-subtitle class="pb-0"> About </v-card-subtitle>
 
@@ -60,7 +66,7 @@
 					<v-card class="mx-auto" max-width="400">
 						<a href="https://github.com/fpborges/ExpTrip.git">
 							<v-img
-								class="white--text align-end"
+								class="white--text align-end image3"
 								height="200px"
 								src="https://github.com/fpborges/ExpTrip/blob/master/images/img_welcome.jpg?raw=true"
 							>
@@ -68,6 +74,9 @@
 									>Exp Trip mobile app</v-card-title
 								>
 							</v-img>
+							<!-- <div class="overlay3">
+								<div class="text">Hello World</div>
+							</div> -->
 						</a>
 
 						<v-card-subtitle class="pb-0"> About </v-card-subtitle>
@@ -125,46 +134,37 @@
 		margin-left: 5px;
 	}
 
-	.previewOnScreen {
-		margin-left: 10%;
-	}
-	/* The desktop with borders */
-	.desktop {
-		content: "";
-		position: relative;
-		/* left: 10%; */
-		width: 350px;
-		height: 250px;
-		border-radius: 6px;
-		border-style: solid;
-		border-color: black;
-		border-width: 24px 24px 80px;
-		background-color: black;
-	}
-
-	/* The top of the keyboard */
-	.desktop:before {
-		content: "";
+	.image {
 		display: block;
-		position: absolute;
-		width: 150px;
-		height: 30px;
-		bottom: -110px;
-		left: 50%;
-		-webkit-transform: translate(-50%);
-		transform: translate(-50%);
-		background: #f1f1f1;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
-		z-index: 1;
+		width: 100%;
+		height: auto;
 	}
 
-	/* The screen (or content) of the device */
-	.desktop .content {
-		width: 300px;
-		height: 200px;
+	.overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #008cba;
 		overflow: hidden;
-		border: none;
-		background: white;
+		width: 0;
+		height: 100%;
+		transition: 0.5s ease;
+	}
+
+	.container:hover .overlay {
+		width: 100%;
+	}
+
+	.text {
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		white-space: nowrap;
 	}
 </style>
