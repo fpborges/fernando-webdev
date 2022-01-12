@@ -1,8 +1,14 @@
 <template>
 	<div class="Header">
 		<div class="discover">
+			<!-- <v-row id="welcome-text">
+				<v-col>
+					<p id="welcome">Welcome to my web page!</p>
+				</v-col>
+			</v-row> -->
 			<v-row>
 				<v-col>
+					<p id="welcome">Hello and Welcome!</p>
 					<v-hover v-slot="{ hover }" open-delay="200">
 						<v-fab-transition>
 							<v-btn
@@ -44,15 +50,17 @@
 	.Header {
 		height: 100%;
 		margin: 0;
-		background: url("https://ohlaladani.com.br/wp-content/uploads/wallpaper-OHLALADANI_DESKTOP_WALLPAPERS_AVENTURA-2.jpg")
-			no-repeat center center fixed !important;
+		/* background: url("https://ohlaladani.com.br/wp-content/uploads/wallpaper-OHLALADANI_DESKTOP_WALLPAPERS_AVENTURA-2.jpg")
+			no-repeat center center fixed !important; */
+		background: url("https://i.ibb.co/HVq4G2D/keyboard-darknew22.jpg") no-repeat
+			center center fixed !important;
 		background-size: cover;
 	}
 
 	.discover {
 		position: absolute;
 		text-align: center;
-		top: 50%;
+		top: 40%;
 		width: 100%;
 		left: 0;
 	}
@@ -63,5 +71,33 @@
 	#top-button {
 		width: 95px;
 		height: 95px;
+	}
+	#welcome-text {
+		margin-bottom: -50px;
+	}
+	#welcome {
+		font-weight: 700;
+		text-align: center;
+		font-size: 40px;
+		font-family: Hack, sans-serif;
+		text-transform: uppercase;
+		background: linear-gradient(90deg, #000, #fff, #000);
+		letter-spacing: 5px;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-repeat: no-repeat;
+		background-size: 80%;
+		animation: shine 10s linear infinite;
+		position: relative;
+	}
+
+	@keyframes shine {
+		0% {
+			background-position-x: -500%;
+		}
+		100% {
+			background-position-x: 500%;
+		}
 	}
 </style>
