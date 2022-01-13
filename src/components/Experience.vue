@@ -129,30 +129,30 @@
 					jobDescription:
 						"Worked as Social Media Ambassador in order to connect Conestoga College to international students through content creation, social media, and digital recruitment support.",
 				},
-				{
-					id: "toyotab",
-					companyName: "Toyota Boshoku",
-					logo: "https://www.toyota-boshoku.com/global/img/common/ogp.png",
-					url: "https://toyotaboshoku.ca/",
-					description:
-						"Toyota Boshoku Corporation business sites manufacture and sell automotive-related components such as automobile interior components and exterior components.",
-					jobTitle: "Assembler Team Member",
-					workPeriod: "2016",
-					jobDescription:
-						"Providing service in assembly duties, accuracy in the assembly of components. Work in fast pace environment, under pressure with tight deadlines, attention to detail to check parts for quality control.",
-				},
-				{
-					id: "timh",
-					companyName: "Tim Hortons",
-					logo: "https://peel.bigbrothersbigsisters.ca/wp-content/uploads/sites/160/2017/10/Tim-hortons-logo.jpg",
-					url: "timhortons.ca",
-					description:
-						"Tim Hortons is a multinational fast food restaurant chain. Tim Hortons serves coffee, doughnuts and other fast food items. It is Canada's largest quick-service restaurant.",
-					jobTitle: "Customer Services",
-					workPeriod: "2015",
-					jobDescription:
-						"Providing customer service, Work under pressure with tight deadlines using repetitive tasks, dispatching orders, preparing stations and preparing for revenue periods and cashier.",
-				},
+				// {
+				// 	id: "toyotab",
+				// 	companyName: "Toyota Boshoku",
+				// 	logo: "https://www.toyota-boshoku.com/global/img/common/ogp.png",
+				// 	url: "https://toyotaboshoku.ca/",
+				// 	description:
+				// 		"Toyota Boshoku Corporation business sites manufacture and sell automotive-related components such as automobile interior components and exterior components.",
+				// 	jobTitle: "Assembler Team Member",
+				// 	workPeriod: "2016",
+				// 	jobDescription:
+				// 		"Providing service in assembly duties, accuracy in the assembly of components. Work in fast pace environment, under pressure with tight deadlines, attention to detail to check parts for quality control.",
+				// },
+				// {
+				// 	id: "timh",
+				// 	companyName: "Tim Hortons",
+				// 	logo: "https://peel.bigbrothersbigsisters.ca/wp-content/uploads/sites/160/2017/10/Tim-hortons-logo.jpg",
+				// 	url: "timhortons.ca",
+				// 	description:
+				// 		"Tim Hortons is a multinational fast food restaurant chain. Tim Hortons serves coffee, doughnuts and other fast food items. It is Canada's largest quick-service restaurant.",
+				// 	jobTitle: "Customer Services",
+				// 	workPeriod: "2015",
+				// 	jobDescription:
+				// 		"Providing customer service, Work under pressure with tight deadlines using repetitive tasks, dispatching orders, preparing stations and preparing for revenue periods and cashier.",
+				// },
 			],
 			brazilCompanies: [
 				{

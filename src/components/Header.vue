@@ -81,23 +81,42 @@
 		font-size: 40px;
 		font-family: Hack, sans-serif;
 		text-transform: uppercase;
-		background: linear-gradient(90deg, #000, #fff, #000);
+		/* background: linear-gradient(90deg, #000, #fff, #000); */
+
 		letter-spacing: 5px;
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-repeat: no-repeat;
 		background-size: 80%;
-		animation: shine 10s linear infinite;
+		animation: pulse 10s linear infinite;
 		position: relative;
 	}
 
-	@keyframes shine {
+	/* @keyframes pulse {
 		0% {
 			background-position-x: -500%;
 		}
 		100% {
 			background-position-x: 500%;
+		}
+	} */
+
+	@keyframes pulse {
+		0% {
+			background-color: silver;
+		}
+		25% {
+			background-color: gold;
+		}
+		50% {
+			background-color: rgb(80, 162, 255);
+		}
+		75% {
+			background-color: gold;
+		}
+		100% {
+			background-color: silver;
 		}
 	}
 </style>
