@@ -92,7 +92,7 @@
 					</v-card>
 				</v-col>
 				<v-col cols="12">
-					<a href="https://github.com/fpborges"
+					<a href="https://github.com/fpborges" style="color: white"
 						><h2>Other Projects on GitHub...</h2></a
 					>
 				</v-col>
