@@ -20,12 +20,12 @@
 					</v-card>
 				</v-col>
 			</v-row>
-			<v-row>
+			<!-- <v-row>
 				<v-col>
 					<v-card elevation="2">
 						<v-card-title>Other Skills and Learn in Progress</v-card-title>
 						<v-card-text>
-							<!-- <canvas class="design"></canvas> -->
+						
 							<v-row>
 								<v-col cols="4">
 									<div class="mt-3">
@@ -55,15 +55,15 @@
 						</v-card-text>
 					</v-card>
 				</v-col>
-				<!-- <v-col>
+				<v-col>
 					<v-card elevation="2">
 						<v-card-title>Other Skills</v-card-title>
 						<v-card-text>
 							<canvas class="other"></canvas>
 						</v-card-text>
 					</v-card>
-				</v-col> -->
-			</v-row>
+				</v-col>
+			</v-row> -->
 		</v-container>
 	</div>
 </template>

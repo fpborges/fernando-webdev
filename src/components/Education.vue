@@ -1,7 +1,7 @@
 <template>
 	<div class="Education">
 		<v-container class="">
-			<h1 class="text-center indigo--text">Education</h1>
+			<h1 class="text-center #0e1128--text">Education</h1>
 			<v-row>
 				<v-col cols="12">
 					<h2>Canada</h2>

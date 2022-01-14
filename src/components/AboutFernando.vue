@@ -2,7 +2,7 @@
 	<div class="AboutFernando">
 		<v-row class="" align="center" justify="center">
 			<v-col cols="9">
-				<h1 class="indigo--text">About me</h1>
+				<h1 class="white--text">About me</h1>
 			</v-col>
 		</v-row>
 
@@ -38,7 +38,7 @@
 	}
 	#container {
 		position: relative;
-		border: 3px solid black;
+		border: 2px solid white;
 		border-radius: 10px;
 		width: 80%;
 		top: 10%;

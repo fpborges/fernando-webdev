@@ -2,16 +2,11 @@
 	<div class="home">
 		<Header />
 
-		<v-app-bar
-			id="menu"
-			shrink-on-scroll
-			fade-img-on-scroll
-			style="background-color: white"
-		>
+		<v-app-bar id="menu" shrink-on-scroll fade-img-on-scroll color="#202337">
 			<div class="d-flex align-center">
 				<v-img
 					alt="Vuetify Logo"
-					class="shrink mr-2"
+					class="shrink mr-2 rounded"
 					contain
 					src="https://i.ibb.co/ryfMqQF/me.jpg"
 					width="40"
@@ -19,7 +14,7 @@
 			</div>
 
 			<v-tabs v-model="tab" centered align-with-title>
-				<v-tabs-slider color="#311B92"></v-tabs-slider>
+				<v-tabs-slider color="white"></v-tabs-slider>
 				<v-tab v-for="(item, index) in tabMenu" :key="index">
 					<a :href="'#' + item.id">{{ item.title }}</a>
 				</v-tab>
@@ -27,40 +22,13 @@
 
 			<v-spacer></v-spacer>
 
-			<v-btn href="/techstack" target="_blank" text>
-				<span class="mr-2">Website Info</span>
-				<v-icon>mdi-open-in-new</v-icon>
+			<v-btn href="/techstack" class="mt-1" target="_blank" text>
+				<span class="mr-2 white--text">Website Info</span>
+				<v-icon color="white">mdi-open-in-new</v-icon>
 			</v-btn>
 		</v-app-bar>
 
-		<!-- <div>
-			<v-toolbar>
-				<v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-				<v-toolbar-title>Vuetify</v-toolbar-title>
-
-				<v-spacer></v-spacer>
-
-				<v-btn icon>
-					<v-icon>mdi-export</v-icon>
-				</v-btn>
-			</v-toolbar>
-		</div> -->
-
-		<!-- <v-btn
-			v-scroll="onScroll"
-			v-show="fab"
-			fab
-			dark
-			fixed
-			top
-			left
-			color="primary"
-		>
-			<v-icon>mdi-menu</v-icon>
-		</v-btn> -->
-
-		<v-menu offset-y transition="slide-y-transition" rounded="b-xl">
+		<v-menu offset-y transition="slide-y-transition">
 			<template v-slot:activator="{ on, attrs }">
 				<v-btn
 					v-scroll="onScroll"
@@ -68,7 +36,7 @@
 					v-on="on"
 					fab
 					dark
-					color="indigo"
+					color="primary"
 					v-show="fab"
 					fixed
 					top
@@ -77,7 +45,7 @@
 					<v-icon>mdi-menu </v-icon>
 				</v-btn>
 			</template>
-			<v-list dark>
+			<v-list color="#202337">
 				<v-list-item v-for="(item, index) in tabMenu" :key="index"
 					><a :href="'#' + item.id" style="color: white">{{ item.title }}</a>
 				</v-list-item>
@@ -178,37 +146,43 @@
 	}
 
 	#aboutf {
-		background-color: #f5f5f5;
+		background-color: #0e1128;
+		color: white;
 		padding: 5%;
 	}
 	#educ {
-		background-color: #f5f5f5;
+		background-color: #dbdee3;
 		padding: 5%;
 	}
 	#expf {
-		background-color: #eeeeee;
+		background-color: #0e1128;
+		color: white;
 		padding: 5%;
 	}
 	#skillsf {
-		background-color: #f5f5f5;
+		background-color: #dbdee3;
 		padding: 5%;
 	}
 	#projf {
-		background-color: #eeeeee;
+		background-color: #0e1128;
+		color: white;
 		padding: 5%;
 	}
 	#hobbyf {
-		background-color: #f5f5f5;
+		background-color: #dbdee3;
 		padding: 5%;
 	}
 	#contactf {
-		background-color: #eeeeee;
+		background-color: #0e1128;
+
+		/* color: white; */
 		padding: 5%;
 	}
 	a:link {
 		text-decoration: none;
 	}
 	.v-application a {
-		color: #0b62a6;
+		/* color: #0b62a6; */
+		color: white;
 	}
 </style>

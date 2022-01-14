@@ -1,7 +1,7 @@
 <template>
 	<div class="Experience">
 		<v-container class="">
-			<h1 class="text-center indigo--text">Relevant Experiences</h1>
+			<h1 class="text-center white--text">Relevant Experiences</h1>
 			<v-row>
 				<v-col cols="12">
 					<h2>From Canada</h2>

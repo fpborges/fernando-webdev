@@ -1,7 +1,7 @@
 <template>
 	<div class="Hobbies">
 		<v-container class="">
-			<h1 class="indigo--text">Hobbies</h1>
+			<h1 class="#0e1128--text">Hobbies</h1>
 			<v-row>
 				<v-col cols="md-12">
 					<div>
