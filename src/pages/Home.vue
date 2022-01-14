@@ -16,7 +16,7 @@
 			<v-tabs v-model="tab" centered align-with-title>
 				<v-tabs-slider color="white"></v-tabs-slider>
 				<v-tab v-for="(item, index) in tabMenu" :key="index">
-					<a :href="'#' + item.id">{{ item.title }}</a>
+					<a :href="'#' + item.id" style="color: white">{{ item.title }}</a>
 				</v-tab>
 			</v-tabs>
 
@@ -182,7 +182,6 @@
 		text-decoration: none;
 	}
 	.v-application a {
-		/* color: #0b62a6; */
 		color: white;
 	}
 </style>
