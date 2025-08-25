@@ -1,11 +1,6 @@
 <template>
 	<div class="Header">
 		<div class="discover">
-			<!-- <v-row id="welcome-text">
-				<v-col>
-					<p id="welcome">Welcome to my web page!</p>
-				</v-col>
-			</v-row> -->
 			<v-row>
 				<v-col>
 					<p id="welcome">Hi, I am Fernando Borges!</p>
