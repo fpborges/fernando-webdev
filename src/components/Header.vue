@@ -25,7 +25,6 @@
 							</v-btn>
 						</v-fab-transition>
 					</v-hover>
-					<!-- <v-img src="D:\Projects\fernando-webdev\src\assets\me.JPG" /> -->
 				</v-col>
 			</v-row>
 		</div>
