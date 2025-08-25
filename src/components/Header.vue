@@ -8,7 +8,7 @@
 			</v-row> -->
 			<v-row>
 				<v-col>
-					<p id="welcome">Hello, I am Fernando!</p>
+					<p id="welcome">Hi, I am Fernando!</p>
 					<v-hover v-slot="{ hover }" open-delay="200">
 						<v-fab-transition>
 							<v-btn
